@@ -2,126 +2,44 @@
 <html><head>
 <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>3ª Semana de Tecnologia</title>
 
+<link rel="stylesheet" href="styles/main.css" type="text/css">
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script type="text/javascript" src="scripts/jquery.cycle.js"></script>
+<script type="text/javascript">
+$(function() {
+$('#pai').show(); //exibe a div pai
+$('#pai').cycle({
+fx: 'fade',
+timeout: 6000,
+speed: 500,
+next: '.next',
+prev: '.previous',
+pager: '.numbers'
+});
+});
+</script>
 <style type="text/css">
-body {
-  margin: 0px;
-  background: #333333 url(images/bg.gif) repeat-x scroll left top;
-  font-size: 13px;
-  line-height: 1.3;
-  color: #666666;
-  font-family: "Lucida Grande",Verdana,sans-serif;
+#pai {
+display:none;
 }
-#header {
-  width: 700px;
-  margin-right: auto;
-  margin-left: auto;
-  height: 75px;
-  background-repeat: no-repeat;
-  background-image: url(images/header.png);
-}
-#menu {
-  width: 700px;
-  margin-right: auto;
-  margin-left: auto;
-  height: 40px;
-  background-repeat: no-repeat;
-  background-image: url(images/menu.png);
-}
-#content {
-  width: 700px;
-  margin-right: auto;
-  margin-left: auto;
-  min-height: 500px;
-  background-color: white;
-}
-#content-inner {
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  width: 700px;
-  margin-right: auto;
-  margin-left: auto;
-  min-height: 10px;
-  background-image: url(images/content-inner.png);
-}
-#content-bottom {
-  background-repeat: no-repeat;
-  background-position: center top;
-  width: 700px;
-  margin-right: auto;
-  margin-left: auto;
-  min-height: 10px;
-  background-image: url(images/content-bottom.png);
-}
-#footer {
-  width: 700px;
-  margin-right: auto;
-  margin-left: auto;
-  min-height: 100px;
-  background-color: #cccccc;
-}
-#footer-inner {
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  width: 700px;
-  margin-right: auto;
-  margin-left: auto;
-  min-height: 10px;
-  background-image: url(images/footer-inner.png);
-}
-#footer-bottom {
-  background-repeat: no-repeat;
-  background-position: center top;
-  width: 700px;
-  margin-right: auto;
-  margin-left: auto;
-  min-height: 10px;
-  background-image: url(images/footer-bottom.png);
-}
-.spacer {
-  width: 700px;
-  margin-right: auto;
-  margin-left: auto;
-  min-height: 5px;
-}
-#menu ul {
-  margin: 0px;
-  padding: 0px 0px 0px 15px;
-  list-style-type: none;
-  list-style-position: inside;
-}
-#menu ul li {
-  color: black;
-  font-family: Arial,Helvetica,sans-serif;
-  float: left;
-  font-size: 13px;
-  padding-top: 12px;
-  font-weight: bolder;
-  padding-left: 15px;
-}
-#faixa {
-  width: 200px;
-  height: 250px;
-  float: right;
-  position: relative;
-}
-
-</style>
-</head><body>
+</style></head>
+<body>
 <div id="faixa">
-<img style="width: 200px; height: 250px;" alt="" src="images/faixa.png"></div>
+<a href="#"><img style="border: 0px solid ; width: 200px; height: 250px;" alt="" src="images/faixa.png"></a></div>
 <div class="spacer">
 </div>
 <div id="header">
 </div>
 <div id="menu">
 <ul>
-<li>Inicio</li>
-<li>Inscrição</li>
-<li>Local</li>
-<li>Agenda</li>
-<li>Espalhe!</li>
-<li>Organização</li>
-<li>Fotos</li><li>Contato</li>
+<li><a href="#">Inicio</a></li>
+<li><a href="#">Inscrição</a></li>
+<li><a href="#">Local</a></li>
+<li><a href="#">Agenda</a></li>
+<li><a href="#">Espalhe!</a></li>
+<li><a href="#">Organização</a></li>
+<li><a href="#">Fotos</a></li>
+<li><a href="#">Contato</a></li>
 </ul>
 </div>
 <div class="spacer">
@@ -129,6 +47,19 @@ body {
 <div id="content-inner">
 </div>
 <div id="content">
+<div id="slider">
+<div id="pai">
+<div class="filho"><img src="images/slider/img1.jpg"></div>
+<div class="filho"><img src="images/slider/img2.jpg"></div>
+<div class="filho"><img src="images/slider/img3.jpg"></div>
+<div class="filho"><img src="images/slider/img4.jpg"></div>
+<div class="filho"><img src="images/slider/img5.jpg"></div>
+</div>
+</div>
+<div id="nav">
+<span class="numbers"></span>
+</div>
+<br>
 </div>
 <div id="content-bottom">
 </div>
@@ -137,8 +68,11 @@ body {
 <div id="footer-inner">
 </div>
 <div style="text-align: center;" id="footer">
-
-<small><small style="font-weight: bold; color: black;"><br><a href="#">Inicio</a> | <a href="#">Inscrição</a> | <a href="#">Local</a> | <a href="#">Agenda</a> | <a href="#">Espalhe!</a> | <a href="#">Organização</a> | <a href="#">Fotos</a> | <a href="#">Contato</a></small></small><br>
+<small><small style="font-weight: bold; color: black;"><br>
+<a href="#">Inicio</a> | <a href="#">Inscrição</a>
+| <a href="#">Local</a> | <a href="#">Agenda</a>
+| <a href="#">Espalhe!</a> | <a href="#">Organização</a>
+| <a href="#">Fotos</a> | <a href="#">Contato</a></small></small><br>
 <br>
 <small><small style="font-weight: bold;"><span style="color: rgb(3, 3, 3);">© Copyright Semana de
 Tecnologia Faculdade Anhanguera Indaiatuba</span></small>.</small><br>

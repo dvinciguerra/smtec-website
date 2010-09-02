@@ -124,3 +124,16 @@ body {
 #nav a:hover {
   color: #990000;
 }
+#footer a {
+  color: #333333;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Arial,Helvetica,sans-serif;
+}
+#footer a:hover {
+  font-weight: bold;
+  color: #990000;
+}
+#connect {
+  margin-top: 20px;
+}

@@ -108,6 +108,7 @@ body {
   height: 250px;
   float: right;
   position: relative;
+  z-index: 100;
 }
 #slider {
   width: 670px;
